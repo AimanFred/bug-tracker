@@ -9,10 +9,14 @@ const Dashboard = () => {
     { title: "Replacement workday", body: "Replacement workday on Aug 26th for sept 1st", author: "Haziq", id: 3 },
   ]);
 
+  const handleDelete = (id) => {
+    const newIssues = issues.filter(issue => issue.id !== id);
+    setIssues(newIssues);
+  }
+
   return (
     <div className="dashboard">
-      <IssueList issues={issues} title="All Issues" />
-      <IssueList issues={issues.filter((issue) => issue.author === "Banidom")} title="Banidom's Issues" />
+      <IssueList issues={issues} title="All Issues" handleDelete={handleDelete} />
     </div>
   );
 };
