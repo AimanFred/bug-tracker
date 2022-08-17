@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IssueList from './IssueList';
 
 const Dashboard = () => {
 
@@ -10,12 +11,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      { issues.map((issue) => (
-        <div className="issue-preview" key={issue.id}>
-          <h2>{ issue.title }</h2>
-          <p>Issued by { issue.author }</p>
-        </div>
-      )) }
+      <IssueList issues={issues} title="All Issues" />
     </div>
   );
 };
