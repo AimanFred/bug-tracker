@@ -10,14 +10,12 @@ const Dashboard = () => {
   useEffect(() => {
     fetch("http://localhost:8000/issues")
     .then((response) => {
-      console.log(response);
       if(!response.ok) {
         throw Error("Could NOT fetch data for that resource")
       }
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       setIssues(data);
       setIsLoading(false);
       setError(null);
