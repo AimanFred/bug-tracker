@@ -1,14 +1,14 @@
 {
   "issues": [
     { 
-      "title": "React Dev Meeting", 
-      "body": "Meeting on google meet today at 5 pm", 
-      "author": "Banidom", 
+      "title": "MySTEP Weekly Report", 
+      "body": "Submit MySTEP Weekly Report on JIRA", 
+      "author": "Farid", 
       "id": 1 
     },
     { 
       "title": "SAFWA Meeting", 
-      "body": "Meeting at SAFWA HQ tomorrow at 10 am", 
+      "body": "Meeting at SAFWA HQ today at 10.30 am", 
       "author": "Banidom", 
       "id": 2 
     },

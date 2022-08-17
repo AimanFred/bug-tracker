@@ -4,12 +4,7 @@ const Navbar = () => {
             <h1>The Issue Tracker</h1>
             <div className="links">
                 <a href="/">Dashboard</a>
-                <a href="/create" style={{
-                    color: "white",
-                    backgroundColor: "#f1356d",
-                    borderRadius: "8px"
-
-                }}>New Issue</a>
+                <a href="/create">New Issue</a>
             </div>
         </nav>
     );
