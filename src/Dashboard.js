@@ -12,6 +12,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <IssueList issues={issues} title="All Issues" />
+      <IssueList issues={issues.filter((issue) => issue.author === "Banidom")} title="Banidom's Issues" />
     </div>
   );
 };
