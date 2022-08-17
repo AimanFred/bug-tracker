@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 
 const Dashboard = () => {
 
-  const [name, setName] = useState("mario");
-  const [age, setAge] = useState(25);
+  const [issues, setIssues] = useState([
+    { title: "React Dev Meeting", body: "Meeting on google meet today at 5 pm", author: "Banidom", id: 1 },
+    { title: "SAFWA Meeting", body: "Meeting at SAFWA HQ tomorrow at 10 am", author: "Banidom", id: 2 },
+    { title: "Replacement workday", body: "Replacement workday on Aug 26th for sept 1st", author: "Haziq", id: 3 },
+  ]);
 
-  const handleClick = () => {
-    setName("luigi");
-    setAge(30);
-  };
-  
   return (
     <div className="dashboard">
-      <h2>Dashboard</h2>
-      <p>{ name } is { age } years old</p>
-      <button onClick={ handleClick }>Click Here</button>
+      { issues.map((issue) => (
+        <div className="issue-preview" key={issue.id}>
+          <h2>{ issue.title }</h2>
+          <p>Issued by { issue.author }</p>
+        </div>
+      )) }
     </div>
   );
 };
