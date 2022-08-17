@@ -1,0 +1,22 @@
+{
+  "issues": [
+    { 
+      "title": "React Dev Meeting", 
+      "body": "Meeting on google meet today at 5 pm", 
+      "author": "Banidom", 
+      "id": 1 
+    },
+    { 
+      "title": "SAFWA Meeting", 
+      "body": "Meeting at SAFWA HQ tomorrow at 10 am", 
+      "author": "Banidom", 
+      "id": 2 
+    },
+    { 
+      "title": "Replacement workday", 
+      "body": "Replacement workday on Aug 26th for sept 1st", 
+      "author": "Haziq", 
+      "id": 3 
+    }
+  ]
+}
