@@ -4,11 +4,7 @@ import IssueList from './IssueList';
 const Dashboard = () => {
 
   const [issues, setIssues] = useState(null);
-
-  const handleDelete = (id) => {
-    const newIssues = issues.filter(issue => issue.id !== id);
-    setIssues(newIssues);
-  }
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:8000/issues")
@@ -18,12 +14,14 @@ const Dashboard = () => {
     .then((data) => {
       console.log(data);
       setIssues(data);
+      setIsLoading(false);
     })
   }, []);
 
   return (
     <div className="dashboard">
-      {issues && <IssueList issues={issues} title="All Issues" handleDelete={handleDelete} />}
+      {isLoading && <div>Loading...</div>}
+      {issues && <IssueList issues={issues} title="All Issues" />}
     </div>
   );
 };
