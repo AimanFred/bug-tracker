@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const IssueList = ({title, issues}) => {
 
   return ( 
@@ -5,9 +7,11 @@ const IssueList = ({title, issues}) => {
       <h1>{ title }</h1>
       { issues.map((issue) => (
         <div className="issue-preview" key={issue.id}>
-          <h2>{ issue.title }</h2>
-          <h4>{ issue.body }</h4>
-          <p>Issued by { issue.author }</p>
+          <Link to={`/issues/${ issue.id }`}>
+            <h2>{ issue.title }</h2>
+            <h4>{ issue.body }</h4>
+            <p>Issued by { issue.author }</p>
+          </Link>
         </div>
       )) }
     </div>
