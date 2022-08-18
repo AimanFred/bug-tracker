@@ -9,7 +9,6 @@ const IssueList = ({title, issues}) => {
         <div className="issue-preview" key={issue.id}>
           <Link to={`/issues/${ issue.id }`}>
             <h2>{ issue.title }</h2>
-            <h4>{ issue.body }</h4>
             <p>Issued by { issue.author }</p>
           </Link>
         </div>
