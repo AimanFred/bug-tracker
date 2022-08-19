@@ -3,6 +3,7 @@ import Dashboard from './Dashboard';
 import Create from './Create';
 import IssueDetails from './IssueDetails';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/issues/:id">
               <IssueDetails />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>
